@@ -1,0 +1,21 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  box-shadow: 0 0 5px 0 $config__c_gray_middle;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: $config__c_white;
+
+  &__info-block {
+    margin-left: 40px;
+    margin-right: auto;
+  }
+
+  &__search-form {
+    margin: 0 40px;
+  }
+}

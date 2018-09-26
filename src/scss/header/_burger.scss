@@ -1,0 +1,38 @@
+.burger {
+  display: block;
+  background-color: transparent;
+  width: 36px;
+  height: 36px;
+  border-radius: $config__brd_main;
+  position: relative;
+  border: none;
+  box-shadow: 0 0 5px 0 $config__c_gray_middle;
+  cursor: pointer;
+  transition: box-shadow .4s, border-radius .4s;
+
+  &::after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 1px;
+    left: 8px;
+    background-color: $config__c_gray_middle;
+    box-shadow: 0 -5px 0 0 $config__c_gray_middle, 0 5px 0 0 $config__c_gray_middle;
+    transition: all .4s;
+  }
+
+  &:hover {
+    box-shadow: 0 0 10px 0 $config__c_gray_middle;
+
+    &::after {
+      background-color: $config__c_blue;
+      box-shadow: 0 -5px 0 0 $config__c_blue, 0 5px 0 0 $config__c_blue;
+    }
+  }
+
+  &:active {
+    box-shadow: 0 0 1px 0 $config__c_gray_middle;
+    border-radius: 7px;
+  }
+}

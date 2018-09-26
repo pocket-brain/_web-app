@@ -1,0 +1,26 @@
+.search-form {
+  &__label {
+
+  }
+
+  &__search-input {
+    padding: 5px 40px 5px 20px;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: inherit;
+    color: #000;
+    border: none;
+    border: 1px solid $config__c_gray_middle;
+    border-radius: $config__brd_main;
+
+    &::placeholder {
+      font-size: inherit;
+      font-family: inherit;
+    }
+
+    &:focus {
+      box-shadow: inset 0 0 3px 0 $config__c_gray_middle;
+    }
+  }
+
+}

@@ -1,0 +1,10 @@
+.header-user-block {
+
+  &__avatar {
+    display: block;
+    width: 36px;
+    height: 36px;
+    border-radius:50%;
+    box-shadow: 0 0 5px 0 $config__c_gray_middle;
+  }
+}

@@ -1,0 +1,11 @@
+.main-info-block {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  &__title {
+    display: block;
+    margin-right: 10px;
+    font-weight: 500;
+  }
+}
