@@ -4,11 +4,13 @@
   left: 0;
   z-index: 100;
   width: 100%;
-  box-shadow: 0 0 5px 0 $config__c_gray_middle;
+  box-shadow: 5px 0 5px 0 $config__c_gray_middle;
   display: flex;
   align-items: center;
   padding: 20px;
   background-color: $config__c_white;
+  border-left: 1px solid transparent;
+  transition: left .5s, width .5s, border .5s;
 
   &__info-block {
     margin-left: 40px;
@@ -17,5 +19,12 @@
 
   &__search-form {
     margin: 0 40px;
+  }
+
+  &_with-side-menu {
+    left: 300px;
+    width: calc(100% - 300px);
+    border-left: 1px solid $config__c_gray_light;
+
   }
 }

@@ -8,31 +8,76 @@
   border: none;
   box-shadow: 0 0 5px 0 $config__c_gray_middle;
   cursor: pointer;
-  transition: box-shadow .4s, border-radius .4s;
+  transition: box-shadow .4s, border-radius .4s, transform .5s;
+  transform: translateX(0);
 
-  &::after {
+  &__line {
     display: block;
-    content: '';
     position: absolute;
     width: 20px;
     height: 1px;
     left: 8px;
     background-color: $config__c_gray_middle;
-    box-shadow: 0 -5px 0 0 $config__c_gray_middle, 0 5px 0 0 $config__c_gray_middle;
-    transition: all .4s;
+    transition: width .4s;
+
+    &::before,
+    &::after {
+      display: block;
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 1px;
+      left: 0;
+      background-color: $config__c_gray_middle;
+      transform-origin: right;
+      transition: width .4s, transform .4s;
+    }
+
+    &::before {
+      top: -6px;
+    }
+
+    &::after {
+      top: 6px;
+    }
   }
 
   &:hover {
     box-shadow: 0 0 10px 0 $config__c_gray_middle;
 
-    &::after {
-      background-color: $config__c_blue;
-      box-shadow: 0 -5px 0 0 $config__c_blue, 0 5px 0 0 $config__c_blue;
+    .burger__line {
+      background-color: darken($config__c_yellow, 50%);
+
+      &::before,
+      &::after {
+        background-color: darken($config__c_yellow, 50%);
+      }
     }
   }
 
   &:active {
     box-shadow: 0 0 1px 0 $config__c_gray_middle;
     border-radius: 7px;
+  }
+
+  &_menu-is-open {
+    transform: translateX(-80px);
+
+    .burger__line {
+      width: 0;
+
+      &::before,
+      &::after {
+        width: 15px;
+      }
+
+      &::before {
+        transform: rotate(-24deg);
+      }
+
+      &::after {
+        transform: rotate(24deg);
+      }
+    }
   }
 }

@@ -1,0 +1,27 @@
+.side-block {
+  padding: 0 20px;
+
+  &__item {
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+    color: $config__c_black;
+    line-height: 18px;
+    font-size: 16px;
+
+    &_fw_500 {
+      font-weight: 500;
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 20px;
+  }
+
+  &__content {
+    padding: 10px 0;
+    border-bottom: 1px solid $config__c_gray_light;
+  }
+}

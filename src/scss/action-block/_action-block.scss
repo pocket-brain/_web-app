@@ -11,7 +11,7 @@
 
     &:hover {
       cursor: pointer;
-      color: $config__c_blue;
+      color: darken($config__c_yellow, 50%);
     }
   }
 
@@ -46,7 +46,7 @@
 
     &:hover {
       cursor: pointer;
-      color: $config__c_blue;
+      color: darken($config__c_yellow, 50%);
     }
   }
 }
